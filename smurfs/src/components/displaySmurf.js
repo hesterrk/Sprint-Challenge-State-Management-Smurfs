@@ -22,6 +22,13 @@ const Button = styled.button `
     margin-top: 5px;
 `
 
+const Div = styled.div `
+border: 6px solid lavender;
+margin: 10px 30px 0px 30px;
+
+
+`
+
 
 function DisplaySmurf(props) {
 
@@ -46,11 +53,11 @@ function DisplaySmurf(props) {
                  {props.propsSmurfs && !props.propsIsLoading && (
                    <div>
                      {props.propsSmurfs.map(sm => (
-                       <div>
+                       <Div>
                        <h2> {sm.name} </h2>
                        <p> {sm.age} </p>
                        <p>{sm.height} </p>
-                        </div>
+                        </Div>
 
                        
                     ))}
