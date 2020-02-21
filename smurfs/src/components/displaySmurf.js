@@ -23,10 +23,6 @@ const Button = styled.button `
 `
 
 
-
-
-
-
 function DisplaySmurf(props) {
 
     return (
@@ -47,8 +43,6 @@ function DisplaySmurf(props) {
         )}
 
                 <div>
-                 <h1>Smurfs: </h1>
-                
                  {props.propsSmurfs && !props.propsIsLoading && (
                    <div>
                      {props.propsSmurfs.map(sm => (

@@ -1,7 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { changeInput, postNewSmurf } from './actions/actionCreators';
+import styled from 'styled-components';
 
+const Form = styled.form `
+border: 5px dotted lavender;
+padding: 10px 0px 10px 0px;
+margin: 10px 50px 10px 50px;
+
+
+`
 
 
 function SmurfForm(props) {
@@ -31,7 +39,7 @@ function SmurfForm(props) {
 
     return (
         <div>
-           <form onSubmit={onSubmit}>
+           <Form onSubmit={onSubmit}>
         <label> Name:<br></br>
         <input 
         value={props.propsName}
@@ -59,7 +67,7 @@ function SmurfForm(props) {
         />
         </label> <br></br>
         <input type="submit" />
-        </form> 
+        </Form> 
 
         </div>
     )
