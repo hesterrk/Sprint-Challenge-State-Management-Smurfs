@@ -20,7 +20,8 @@ export const formReducer = (state = initialState, action) => {
     
         };
     
-        case types.RESET_INPUT :
+        // case types.RESET_INPUT :
+        case types.POST_SMURF_SUCCESS :
         return initialState
         
         default :

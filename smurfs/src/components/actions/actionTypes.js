@@ -6,10 +6,10 @@ export const POST_SMURF_START = 'POST_SMURF_START'
 export const POST_SMURF_SUCCESS = 'POST_SMURF_SUCCESS'
 export const POST_SMURF_ERROR = 'POST_SMURF_ERROR'
 
-//input change and reset input action 
+//input change 
 
 export const INPUT_CHANGE = 'INPUT_CHANGE'
-export const RESET_INPUT = 'RESET_INPUT'
+// export const RESET_INPUT = 'RESET_INPUT'
 
 //form spinner 
 export const FORM_LOAD_START = 'FORM_LOAD_START'

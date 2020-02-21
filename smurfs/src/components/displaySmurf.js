@@ -54,7 +54,9 @@ function DisplaySmurf(props) {
 
                        
                     ))}
+                    
                    </div>
+                  
                  )}
              </div>
 
