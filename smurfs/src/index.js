@@ -10,8 +10,9 @@ import rootReducer from './components/reducers/index';
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
 
+
 ReactDOM.render(
-    <Provider store={store}>
-    <App />
-    </Provider>
-    , document.getElementById('root'));
+<Provider store={store}>
+<App />
+</Provider>
+,document.getElementById('root'));

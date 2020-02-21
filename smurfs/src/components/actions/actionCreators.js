@@ -7,23 +7,18 @@ export const fetchSmurfs = () =>  dispatch => {
     });
     
     axios.get('http://localhost:3333/smurfs')
-    .then(res => {
-        console.log(res);
-        dispatch({
-        type: types.FETCHING_SMURF_SUCCESS, payload: res.data
+        .then(res => {
+         console.log(res);
+         dispatch({
+            type: types.FETCHING_SMURF_SUCCESS, payload: res.data
     });
 
     })
     .catch(err => {
         dispatch({
             type: types.FETCHING_SMURF_ERROR, payload: err.response
-
         });
-
-
     });
-
-
 };
 
 
@@ -50,16 +45,14 @@ export const postNewSmurf = ({name, age, height}) => dispatch => {
         height
 
     })
-    .then(res => {
-        dispatch({
-            type: types.POST_SMURF_SUCCESS, payload: res.data
-
+        .then(res => {
+            dispatch({
+             type: types.POST_SMURF_SUCCESS, payload: res.data
         })
         })
         .catch(err => {
             dispatch({
-                type: types.POST_SMURF_ERROR, payload: err.response
-                
+                type: types.POST_SMURF_ERROR, payload: err.response    
             });
 
         })
@@ -69,6 +62,4 @@ export const postNewSmurf = ({name, age, height}) => dispatch => {
                 type: types.FORM_LOAD_STOP
             })
         })
-
-
 }

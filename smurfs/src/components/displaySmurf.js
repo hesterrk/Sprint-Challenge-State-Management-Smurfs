@@ -25,8 +25,6 @@ const Button = styled.button `
 const Div = styled.div `
 border: 6px solid lavender;
 margin: 10px 30px 0px 30px;
-
-
 `
 
 
@@ -35,9 +33,9 @@ function DisplaySmurf(props) {
     return (
         <div>
          <Button onClick={props.fetchSmurfs}>Get Smurfs!!</Button>
-         {!props.propsSmurfs && !props.propsIsLoading && (
-            <h3>Get a List of Smurfs Here </h3>
-        )}
+            {!props.propsSmurfs && !props.propsIsLoading && (
+             <h3>Get a List of Smurfs Here </h3>
+            )}
 
         {props.propsIsLoading && (
             <Loader
@@ -49,23 +47,23 @@ function DisplaySmurf(props) {
             />
         )}
 
-                <div>
-                 {props.propsSmurfs && !props.propsIsLoading && (
-                   <div>
-                     {props.propsSmurfs.map(sm => (
-                       <Div>
-                       <h2> {sm.name} </h2>
-                       <p> {sm.age} </p>
-                       <p>{sm.height} </p>
-                        </Div>
-
+            <div>
+             {props.propsSmurfs && !props.propsIsLoading && (
+            
+            <div>
+             {props.propsSmurfs.map(sm => (
+                <Div>
+                    <h2>{sm.name} </h2>
+                    <p>{sm.age} </p>
+                    <p>{sm.height} </p>
+                </Div>
                        
-                    ))}
+             ))}
                     
-                   </div>
+            </div>
                   
-                 )}
-             </div>
+            )}
+            </div>
 
         </div>
     )
@@ -74,9 +72,9 @@ function DisplaySmurf(props) {
 
 const mapStateToProps = state => {
     return {
-        propsSmurfs: state.smurfReducer.smurfs,
-        propsIsLoading: state.smurfReducer.isLoading,
-        propsError: state.smurfReducer.error 
+    propsSmurfs: state.smurfReducer.smurfs,
+    propsIsLoading: state.smurfReducer.isLoading,
+    propsError: state.smurfReducer.error 
     };
 };
 
