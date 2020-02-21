@@ -12,6 +12,5 @@ export const INPUT_CHANGE = 'INPUT_CHANGE'
 export const RESET_INPUT = 'RESET_INPUT'
 
 //form spinner 
-
 export const FORM_LOAD_START = 'FORM_LOAD_START'
 export const FORM_LOAD_STOP = 'FORM_LOAD_STOP'
