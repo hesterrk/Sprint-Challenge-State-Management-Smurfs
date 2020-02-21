@@ -1,3 +1,6 @@
+import * as types from '../actions/actionTypes';
+
+
 const initialState = {
     name: '',
     age: '',
@@ -7,5 +10,24 @@ const initialState = {
 
 
 export const formReducer = (state = initialState, action) => {
-return state;
+
+    switch(action.type) {
+
+        case types.INPUT_CHANGE : 
+        return {
+            ...state,
+            [action.payload.inputName] : action.payload.inputValue
+    
+        };
+    
+        case types.RESET_INPUT :
+        return initialState
+        
+        default :
+        return state
+        }
+
+
+
+
 }
