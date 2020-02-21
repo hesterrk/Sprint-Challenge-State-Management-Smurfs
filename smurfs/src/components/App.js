@@ -14,8 +14,9 @@ function App() {
       <div className="App">
       
       <H1>SMURF VILLAGE WELCOME!</H1>
-      <DisplaySmurf/>
       <SmurfForm/>
+      <DisplaySmurf/>
+     
       </div>
     );
 }
