@@ -23,15 +23,15 @@ function DisplaySmurf(props) {
         )}
 
                 <div>
-                 <h2>Smurfs: </h2>
+                 <h1>Smurfs: </h1>
                 
                  {props.propsSmurfs && !props.propsIsLoading && (
                    <div>
                      {props.propsSmurfs.map(sm => (
                        <div>
-                     {sm.name}
-                     {sm.age}
-                     {sm.height}
+                       <h2> {sm.name} </h2>
+                       <p> {sm.age} </p>
+                       <p>{sm.height} </p>
                         </div>
 
                        
