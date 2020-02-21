@@ -8,9 +8,7 @@ border: 5px dotted lavender;
 padding: 10px 0px 10px 0px;
 margin: 10px 50px 10px 50px;
 
-
 `
-
 
 function SmurfForm(props) {
 
