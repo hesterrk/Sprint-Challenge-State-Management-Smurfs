@@ -1,0 +1,17 @@
+export const FETCHING_SMURF_START = 'FETCHING_SMURF_START';
+export const FETCHING_SMURF_SUCCESS = 'FETCHING_SMURF_SUCCESS';
+export const FETCHING_SMURF_ERROR = 'FETCHING_SMURF_ERROR';
+
+export const POST_SMURF_START = 'POST_SMURF_START'
+export const POST_SMURF_SUCCESS = 'POST_SMURF_SUCCESS'
+export const POST_SMURF_ERROR = 'POST_SMURF_ERROR'
+
+//input change and reset input action 
+
+export const INPUT_CHANGE = 'INPUT_CHANGE'
+export const RESET_INPUT = 'RESET_INPUT'
+
+//form spinner 
+
+export const FORM_LOAD_START = 'FORM_LOAD_START'
+export const FORM_LOAD_STOP = 'FORM_LOAD_STOP'
