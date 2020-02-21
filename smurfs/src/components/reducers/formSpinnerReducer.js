@@ -1,3 +1,4 @@
+import * as types from '../actions/actionTypes';
 
 const initialState = {
 
@@ -5,5 +6,21 @@ const initialState = {
 }
 
 export function formLoadingReducer(state = initialState, action) {
-return state;
+    switch(action.type) {
+        case types.FORM_LOAD_START :
+            return {
+                formLoading: true
+            };
+
+            case types.FORM_LOAD_STOP :
+                return initialState
+
+
+            default :
+            return state
+    }
+
+
+
+
 }
