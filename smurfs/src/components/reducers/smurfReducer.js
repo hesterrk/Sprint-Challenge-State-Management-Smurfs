@@ -50,9 +50,29 @@ export function smurfReducer(state = initialState, action) {
             ...state,
             error: action.payload
             };
-            
+
+        
+        case types.PUT_SMURF_START :
+            return {
+            ...state,
+            isLoading: true
+            };
+        
+        case types.PUT_UPDATED_SMURF : 
+            return {
+            ...state, 
+            isLoading: false,
+            smurfs: state.smurfs.map(sm => {
+            if(action.payload.id === sm.id) {
+            return action.payload
+            }
+            return sm
+            })
+        
+           };
+  
         default :
-            return state
+         return state
     }
 
 }

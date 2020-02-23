@@ -14,3 +14,9 @@ export const INPUT_CHANGE = 'INPUT_CHANGE'
 //form spinner 
 export const FORM_LOAD_START = 'FORM_LOAD_START'
 export const FORM_LOAD_STOP = 'FORM_LOAD_STOP'
+
+//PUT 
+
+export const PUT_SMURF_START = 'PUT_SMURF_START'
+export const PUT_UPDATED_SMURF = 'PUT_UPDATED_SMURF'
+export const PUT_SMURF_ERROR = 'PUT_SMURF_ERROR'

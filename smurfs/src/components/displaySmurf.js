@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchSmurfs } from './actions/actionCreators';
 import Loader from 'react-loader-spinner';
 import styled from 'styled-components';
+ 
 
 const Button = styled.button `
     box-shadow:inset 0px 1px 0px 0px #e184f3;
@@ -23,12 +24,13 @@ const Button = styled.button `
 `
 
 const Div = styled.div `
-border: 6px solid lavender;
 margin: 10px 30px 0px 30px;
 `
 
 
 function DisplaySmurf(props) {
+
+
 
     return (
         <div>
@@ -50,7 +52,7 @@ function DisplaySmurf(props) {
             <div>
              {props.propsSmurfs && !props.propsIsLoading && (
             
-            <div>
+            <div className="here">
              {props.propsSmurfs.map(sm => (
                 <Div>
                     <h2>{sm.name} </h2>
@@ -62,7 +64,7 @@ function DisplaySmurf(props) {
                     
             </div>
                   
-            )}
+             )} 
             </div>
 
         </div>

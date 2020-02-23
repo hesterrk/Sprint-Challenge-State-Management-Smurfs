@@ -63,3 +63,29 @@ export const postNewSmurf = ({name, age, height}) => dispatch => {
             })
         })
 }
+
+
+export const updateSmurf = ({name, age, height, id }) => dispatch => {
+    dispatch({
+        type: types.PUT_SMURF_START
+    })
+    
+    axios.put(`http://localhost:3333/smurfs/${id}`, {
+        name,
+        age,
+        height
+
+    })
+    .then(res => {
+        dispatch({
+            type: types.PUT_UPDATED_SMURF, payload: res.data
+        })
+    })
+    .catch(err => {
+        dispatch({
+            type: types.PUT_SMURF_ERROR, payload: err.response
+        })
+    })
+    
+    
+    }
